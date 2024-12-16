@@ -1,0 +1,43 @@
+package com.cacttus.navigationdrawer_gr1.activities
+
+import android.os.Bundle
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.cacttus.navigationdrawer_gr1.R
+import com.cacttus.navigationdrawer_gr1.databinding.ActivityMainBinding
+import com.cacttus.navigationdrawer_gr1.fragments.HomeFragment
+import com.cacttus.navigationdrawer_gr1.fragments.ProfileFragment
+import com.cacttus.navigationdrawer_gr1.fragments.SettingsFragment
+
+class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var toggle: ActionBarDrawerToggle
+    private lateinit var homeFragment: HomeFragment
+    private lateinit var profileFragment: ProfileFragment
+    private lateinit var settingsFragment: SettingsFragment
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
+
+    fun createFragments() {
+        homeFragment = HomeFragment()
+        profileFragment = ProfileFragment()
+        settingsFragment = SettingsFragment()
+    }
+
+    fun setCurrentFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fragmentContainer, fragment)
+        }.commit()
+    }
+
+    fun setMenuIcon(){
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    }
+
+    fun setToggleAndBindLayout(){
+        toggle= ActionBarDrawerToggle(this, binding.drawerLayout, R.string.open, R.string.close)
+    }
+}
