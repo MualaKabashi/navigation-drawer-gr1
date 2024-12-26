@@ -9,7 +9,7 @@ import android.widget.TextView
 import com.cacttus.navigationdrawer_gr1.R
 import com.cacttus.navigationdrawer_gr1.model.Post
 
-class PostAdapter(var context: Context, private var postList: List<Post>) : BaseAdapter() {
+class PostAdapter(var context: Context, var postList: List<Post>) : BaseAdapter() {
     var layoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
     override fun getCount(): Int {

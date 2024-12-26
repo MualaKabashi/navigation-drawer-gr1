@@ -5,12 +5,10 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object Helpers {
-    const val BASE_URL = "https://jsonplaceholder.typicode.com/"
-
     fun provideRetrofit() : ServiceApi {
         return Retrofit.Builder()
-            .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
+            .baseUrl("https://jsonplaceholder.typicode.com/")
             .build()
             .create(ServiceApi::class.java)
     }
