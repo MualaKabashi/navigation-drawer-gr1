@@ -10,6 +10,11 @@
             android:id="@+id/profileItem"
             android:icon="@drawable/ic_person"
             android:title="Profile" />
+
+        <item
+            android:id="@+id/posts"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Posts" />
     </group>
 
     <item

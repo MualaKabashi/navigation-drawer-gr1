@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/firstGroup">
+        <item
+            android:id="@+id/homeItem"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
 
-<group android:id="@+id/firstGroup">
-    <item
-        android:id="@+id/homeItem"
-        android:icon="@drawable/ic_home"
-        android:title="Home" />
+        <item
+            android:id="@+id/profileItem"
+            android:icon="@drawable/ic_person"
+            android:title="Profile" />
 
-    <item
-        android:id="@+id/profileItem"
-        android:icon="@drawable/ic_person"
-        android:title="Profile" />
-</group>
+        <item
+            android:id="@+id/posts"
+            android:icon="@drawable/ic"
+            android:title="Posts" />
+    </group>
 
     <item
         android:id="@+id/settings"

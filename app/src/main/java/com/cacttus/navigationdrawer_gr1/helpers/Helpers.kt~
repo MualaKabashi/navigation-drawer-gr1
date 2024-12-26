@@ -1,0 +1,7 @@
+package com.cacttus.navigationdrawer_gr1.helpers
+
+object Helpers {
+    const val BASE_URL = "https://jsonplaceholder.typicode.com/"
+
+    fun provideRetrofit()
+}
