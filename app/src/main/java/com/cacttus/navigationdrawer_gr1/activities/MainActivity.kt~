@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.cacttus.navigationdrawer_gr1.R
 import com.cacttus.navigationdrawer_gr1.databinding.ActivityMainBinding
 import com.cacttus.navigationdrawer_gr1.fragments.HomeFragment
+import com.cacttus.navigationdrawer_gr1.fragments.PostFragment
 import com.cacttus.navigationdrawer_gr1.fragments.ProfileFragment
 import com.cacttus.navigationdrawer_gr1.fragments.SettingsFragment
 
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var homeFragment: HomeFragment
     private lateinit var profileFragment: ProfileFragment
     private lateinit var settingsFragment: SettingsFragment
+    private lateinit var postFragment: PostFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,6 +49,10 @@ class MainActivity : AppCompatActivity() {
                     closeDrawerIfOpen()
                     setCurrentFragment(settingsFragment)
                 }
+                R.id.posts ->{
+                    closeDrawerIfOpen()
+                    setCurrentFragment(postFragment)
+                }
             }
             true
         }
@@ -57,6 +63,7 @@ class MainActivity : AppCompatActivity() {
         homeFragment = HomeFragment()
         profileFragment = ProfileFragment()
         settingsFragment = SettingsFragment()
+        postFragment  = PostFragment()
     }
 
     private fun setCurrentFragment(fragment: Fragment) {

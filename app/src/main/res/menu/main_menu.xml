@@ -15,6 +15,11 @@
             android:id="@+id/posts"
             android:icon="@drawable/ic_launcher_background"
             android:title="Posts" />
+
+        <item
+            android:id="@+id/comments"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Comments" />
     </group>
 
     <item

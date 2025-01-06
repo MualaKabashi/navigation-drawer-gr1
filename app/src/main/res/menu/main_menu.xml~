@@ -13,8 +13,13 @@
 
         <item
             android:id="@+id/posts"
-            android:icon="@drawable/ic"
+            android:icon="@drawable/ic_launcher_background"
             android:title="Posts" />
+
+        <item
+            android:id="@+id/p"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Comments" />
     </group>
 
     <item

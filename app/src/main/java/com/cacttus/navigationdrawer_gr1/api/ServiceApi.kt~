@@ -14,6 +14,6 @@ interface ServiceApi {
     @GET("posts/{id}")
     fun getPostById(@Path("id") id: Int): Call<Post>
 
-    @GET("comments")
+    @GET("comments/")
     fun getCommentsByPostId(@Query("postId") postId: Int): Call<List<Comment>>
 }
