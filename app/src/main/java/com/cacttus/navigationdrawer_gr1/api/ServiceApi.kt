@@ -2,6 +2,7 @@ package com.cacttus.navigationdrawer_gr1.api
 
 import com.cacttus.navigationdrawer_gr1.model.Comment
 import com.cacttus.navigationdrawer_gr1.model.Post
+import com.cacttus.navigationdrawer_gr1.model.User
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -16,4 +17,7 @@ interface ServiceApi {
 
     @GET("comments")
     fun getCommentsByPostId(@Query("postId") postId: Int): Call<List<Comment>>
+
+    @GET("users")
+    fun getUsers(): Call<List<User>>
 }
