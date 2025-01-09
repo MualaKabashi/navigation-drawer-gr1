@@ -20,6 +20,11 @@
             android:id="@+id/comments"
             android:icon="@drawable/ic_launcher_background"
             android:title="Comments" />
+
+        <item
+            android:id="@+id/users"
+            android:icon="@drawable/ic_launcher_background"
+            android:title="Users" />
     </group>
 
     <item
