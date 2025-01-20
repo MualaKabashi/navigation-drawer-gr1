@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.cacttus.navigationdrawer_gr1.R
+import androidx.navigation.fragment.findNavController
 import com.cacttus.navigationdrawer_gr1.adapters.PostAdapter
 import com.cacttus.navigationdrawer_gr1.databinding.PostsFragmentBinding
 import com.cacttus.navigationdrawer_gr1.helpers.Helpers.provideRetrofit
@@ -50,7 +50,9 @@ class PostFragment : Fragment() {
 
                     binding.listView.setOnItemClickListener { adapterView, view, i, l ->
                         putIntToSharedPreferences(requireContext(), "id", list[i].id)
-                        setCurrentFragment(PostDetailsFragment())
+                        var action =
+                            PostFragmentDirections.actionPostFragmentToPostDetailsFragment(list[i].id)
+                        findNavController().navigate(action)
                     }
                 } else {
                     Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
@@ -63,9 +65,4 @@ class PostFragment : Fragment() {
         })
     }
 
-    private fun setCurrentFragment(fragment: Fragment) {
-        parentFragmentManager.beginTransaction().apply {
-            replace(R.id.fragmentContainer, fragment)
-        }.commit()
-    }
 }
