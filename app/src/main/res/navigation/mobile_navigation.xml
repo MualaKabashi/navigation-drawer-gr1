@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.cacttus.navigationdrawer_gr1.fragments.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/commentsFragment"
+        android:name="com.cacttus.navigationdrawer_gr1.fragments.CommentsFragment"
+        android:label="CommentsFragment" />
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="com.cacttus.navigationdrawer_gr1.fragments.PostFragment"
+        android:label="PostFragment" />
+    <fragment
+        android:id="@+id/postDetailsFragment"
+        android:name="com.cacttus.navigationdrawer_gr1.fragments.PostDetailsFragment"
+        android:label="PostDetailsFragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.cacttus.navigationdrawer_gr1.fragments.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.cacttus.navigationdrawer_gr1.fragments.SettingsFragment"
+        android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.cacttus.navigationdrawer_gr1.fragments.UserFragment"
+        android:label="UserFragment" />
+</navigation>
